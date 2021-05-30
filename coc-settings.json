@@ -1,4 +1,6 @@
 {
   "suggest.noselect": false,
-  "tsserver.npm": "/usr/bin/npm"
+  "tsserver.npm": "/usr/bin/npm",
+  "npm.binPath": "/usr/bin/npm",
+  "tsserver.disableAutomaticTypeAcquisition": true
 }
