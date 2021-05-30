@@ -1,3 +1,4 @@
 {
+  "suggest.noselect": false,
   "tsserver.npm": "/usr/bin/npm"
 }

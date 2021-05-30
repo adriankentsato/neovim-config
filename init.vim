@@ -22,6 +22,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
 
 Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -29,6 +30,8 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'vim-airline/vim-airline'
+
+Plug 'HerringtonDarkholme/yats.vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -47,9 +50,6 @@ filetype plugin indent on
 
 " enable syntax highlighting
 syntax on
-
-" enable line numbers
-set number
 
 " set the color @ 80th char mark
 set colorcolumn=80
@@ -303,4 +303,15 @@ endfunction
 
 " open NERDTree with ctrl + n
 nmap <C-n> :call ToggleTree()<CR>
+
+nmap <silent> <C-m> <plug>NERDCommenterToggle
+vmap <silent> <C-m> <plug>NERDCommenterToggle
+
+set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
