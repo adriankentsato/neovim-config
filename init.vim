@@ -59,7 +59,7 @@ set background=dark
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " do not wrap text
-set nowrap
+"set nowrap
 
 " highlight the search
 set hlsearch
