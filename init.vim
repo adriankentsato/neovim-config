@@ -11,23 +11,22 @@
 set nocompatible
 filetype off
 
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+
+Plug 'airblade/vim-gitgutter'
 
 Plug 'morhetz/gruvbox'
 
-Plug 'tpope/vim-fugitive'
-
 Plug 'preservim/nerdtree'
-
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 Plug 'christoomey/vim-tmux-navigator'
-
-Plug 'airblade/vim-gitgutter'
 
 Plug 'vim-airline/vim-airline'
 
@@ -103,17 +102,6 @@ nmap <leader>l :bn<CR>
 
 " Move to previous buffer
 nmap <leader>h :bp<CR>
-
-nmap <leader>1 :b1<CR>
-nmap <leader>2 :b2<CR>
-nmap <leader>3 :b3<CR>
-nmap <leader>4 :b4<CR>
-nmap <leader>5 :b5<CR>
-nmap <leader>6 :b6<CR>
-nmap <leader>7 :b7<CR>
-nmap <leader>8 :b8<CR>
-nmap <leader>9 :b9<CR>
-
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
@@ -281,4 +269,5 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+let NERDTreeShowHidden=1
 
