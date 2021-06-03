@@ -42,6 +42,7 @@ call plug#end()
 inoremap jk <ESC>
 
 map <silent> <C-p> :Files<CR>
+map <silent> <C-f> :Ag<CR>
 
 " set the theme to gruvbox
 colorscheme gruvbox
